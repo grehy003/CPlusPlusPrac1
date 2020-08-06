@@ -3,7 +3,7 @@
 #include <ctime>
 #include <random>
 
-int main()
+int guessingGame()
 {
 
     std::cout << "Welcome to Software Development with C++" << std::endl;

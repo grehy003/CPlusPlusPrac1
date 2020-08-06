@@ -11,14 +11,29 @@ int main()
 
     // TODO: implement according to the instructions
     std::cout << "Would you like to begin: (y/n)" << std::endl;
-    std::string beginAnswer;
+
+
+    char beginAnswer;
     std::cin >> beginAnswer;
 
-    if(beginAnswer == "y"){
-
-
-
+    switch(beginAnswer){
+    case 'y':
+        std::cout << "You said Yes, continuing execution." << std::endl;
+        break;
+    case 'Y':
+        std::cout << "You said Yes, continuing execution." << std::endl;
+        break;
+    case 'n':
+        std::cout << "You said No, quitting now." << std::endl;
+        break;
+    case 'N':
+        std::cout << "You said No, quitting now." << std::endl;
+        break;
+    default:
+        std::cout << "You entered an invalid option. Terminating with error" << std::endl;
+        return 1;
     }
+
 
     return 0;
 }

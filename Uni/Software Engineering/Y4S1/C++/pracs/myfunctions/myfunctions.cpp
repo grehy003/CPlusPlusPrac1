@@ -2,10 +2,12 @@
 #include <random>
 #include <ctime>
 
+#include <iostream>
+
 std::string rollADie() {
   std::mt19937 mtRand{uint32_t(time(nullptr))};
-  int random = mtRand() % 6;
-  switch (random) {
+  int random = mtRand();
+  switch (abs(random % 6)) {
   case 0:
     return "One";
     break;
@@ -25,4 +27,5 @@ std::string rollADie() {
     return "Six";
   }
   return "Broken Die!";
+  std::cout << "Modulo number: " << random % 6<< std::endl;
 }

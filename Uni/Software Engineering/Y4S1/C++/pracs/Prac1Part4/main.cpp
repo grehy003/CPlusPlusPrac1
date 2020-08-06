@@ -55,10 +55,24 @@ int main()
         numberSum += numbers.at(numberIterator);
         numberIterator++;
     }
-
     std::cout << "The summed value is: " << numberSum << std::endl;
 
+    //Ternary syntax: Condition        ? True              : False     ;
+    int lastIndex = numberIterator > 0 ? numberIterator -1 : abs(numberIterator -1) ;
+
+    std::cout << "The lastIndex value is: " << lastIndex << std::endl;
     return 0;
+
+
+    if(lastIndex == numbers.size() -1){
+        std::cout << "Processed all numbers" << std::endl;
+    }
+    else if(lastIndex > (numbers.size() -1) / 2 ){
+        std::cout << "Almost made it all the way" << std::endl;
+    }
+    else{
+         std::cout << "Didn't even get half way" << std::endl;
+    }
 
 }
 

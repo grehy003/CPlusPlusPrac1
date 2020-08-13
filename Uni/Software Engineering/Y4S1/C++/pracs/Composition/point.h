@@ -1,5 +1,6 @@
 #ifndef POINT_H
 #define POINT_H
+#include<string>
 
 
 class Point
@@ -14,6 +15,8 @@ public:
     void setY(float y);
 
     static Point origin;
+
+    std::string toString();
 private:
   float _x;
   float _y;

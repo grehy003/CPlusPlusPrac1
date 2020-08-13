@@ -12,15 +12,18 @@ int main()
 
     switch(choice) {
     case 1:{
-            std::cout << factory.createApplePie().Description();
+            ApplePie appie = factory.createApplePie();
+            std::cout << appie.Description();
             break;
         }
     case 2:{
-            std::cout << factory.createApricotPie().Description();
+            ApricotPie aprpie = factory.createApricotPie();
+            std::cout << aprpie.Description();
             break;
         }
     case 3: {
-            std::cout << factory.createRaspberryPie().Description();
+            RaspberryPie raspie = factory.createRaspberryPie();
+            std::cout << raspie.Description();
             break;
         }
     default:{

@@ -1,8 +1,13 @@
-#include <QCoreApplication>
+#include <iostream>
+#include "myname.h"
 
-int main(int argc, char *argv[])
+int main()
 {
-    QCoreApplication a(argc, argv);
+//  MyName name{"Hunter", "Green", "Northcote"};
+//  name.show(std::cout);
 
-    return a.exec();
-}
+  MyName name(MyName::readFrom(std::cin));
+  name.show(std::cout);
+
+  return 0;
+};

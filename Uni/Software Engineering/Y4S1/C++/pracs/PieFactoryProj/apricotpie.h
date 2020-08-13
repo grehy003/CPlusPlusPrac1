@@ -6,7 +6,7 @@ class ApricotPie
 {
 public:
     ApricotPie();
-    std::string Description(const std::string name);
+    std::string Description();
 };
 
 #endif // APRICOTPIE_H

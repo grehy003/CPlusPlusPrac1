@@ -4,3 +4,7 @@ ApricotPie::ApricotPie()
 {
 
 }
+
+std::string ApricotPie::Description(){
+    return "Apricot pie";
+}

@@ -7,7 +7,7 @@ class ApplePie
 {
 public:
     ApplePie();
-    std::string Description(const std::string name);
+    std::string Description();
 };
 
 #endif // APPLEPIE_H

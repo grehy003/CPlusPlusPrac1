@@ -1,6 +1,6 @@
 #ifndef PIEFACTORY_H
 #define PIEFACTORY_H
-
+#include <string>
 
 class PieFactory
 {

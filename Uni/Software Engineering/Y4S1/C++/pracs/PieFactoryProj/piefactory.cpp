@@ -4,3 +4,15 @@ PieFactory::PieFactory()
 {
 
 }
+
+ApplePie PieFactory::createApplePie(){
+
+}
+
+ApricotPie PieFactory::createApricotPie(){
+
+}
+
+RaspberryPie PieFactory::createRaspberryPie(){
+
+}

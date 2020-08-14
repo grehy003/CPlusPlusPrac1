@@ -6,6 +6,8 @@
 class Point
 {
 public:
+    static Point origin;
+
     Point(float x = 0, float y = 0);
 
     float x() const;
@@ -14,7 +16,6 @@ public:
     void setX(float x);
     void setY(float y);
 
-    static Point origin;
 
     std::string toString();
 private:

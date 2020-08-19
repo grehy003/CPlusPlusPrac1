@@ -14,30 +14,27 @@ namespace shapes {
 
 int main()
 {
-//    Point &p = Point::origin;
-//    std::cout << "Origin is at: " << Point::origin.toString() << std::endl;
-//    p.setX(10);
-//    std::cout << "Origin is at: " << Point::origin.toString() << std::endl;
-//    std::cout << "p is at: " << p.toString() << std::endl;
 
-    Point p = Point::origin;
-    float e = 3.0;
-    shapes::Square sq = shapes::Square(p, e);
-    std::cout << "Sq is at:" << sq.toString() << std::endl;
+    float edge,x,y;
+    std::cout << "Enter edge length of square, then x and y values for midpoint" << std::endl;
 
-    float x = 3.0;
-    float y = 4.7;
-    Point q = Point();
-    q.setX(x);
-    q.setY(y);
-    std::cout << "values for q is :" << q.toString() << std::endl;
-    sq.setMidpoint(q);
-    std::cout << "Sq is at: " << sq.toString() << std::endl;
+    std::cin >> edge >> x >> y;
+    Point p = Point(x,y);
+    shapes::Square square = shapes::Square(p,edge);
 
-    const Point t = Point(3.2,8);
-    sq.setMidpoint(t);
-    std::cout << "values for t is :" << q.toString() << std::endl;
-    std::cout << "Sq is at: " << sq.toString() << std::endl;
+    std::cout << "Square top left is at: " << square.topLeft().toString() << std::endl;
+    std::cout << "Square top right is at: " << square.topRight().toString() << std::endl;
+    std::cout << "Square bottom left is at: " << square.bottomLeft().toString() << std::endl;
+    std::cout << "Square bottom right is at: " << square.bottomRight().toString() << std::endl;
+
+    std::cout << "Enter values for the square to be translated, x then y" << std::endl;
+    std::cin >> x >> y;
+    square.translate(x,y);
+
+    std::cout << "Square top left is at: " << square.topLeft().toString() << std::endl;
+    std::cout << "Square top right is at: " << square.topRight().toString() << std::endl;
+    std::cout << "Square bottom left is at: " << square.bottomLeft().toString() << std::endl;
+    std::cout << "Square bottom right is at: " << square.bottomRight().toString() << std::endl;
 
     return 0;
 }

@@ -10,8 +10,8 @@ class Square
 {
 public:
     Square(Point point, float length);
-    void setMidpoint(Point);
-    void setLength(float);
+    void setMidpoint(Point&);
+    void setLength(float&);
     Point &midpoint();
     float length() const;
     std::string toString();

@@ -10,11 +10,11 @@ Square::Square(Point point, float length)
     setLength(length);
 }
 
-void Square::setMidpoint(Point p){
+void Square::setMidpoint(Point &p){
     _midpoint = p;
 }
 
-void Square::setLength(float f){
+void Square::setLength(float &f){
     _length = f;
 }
 

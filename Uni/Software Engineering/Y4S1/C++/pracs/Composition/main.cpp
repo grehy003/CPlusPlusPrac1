@@ -25,8 +25,8 @@ int main()
     shapes::Square sq = shapes::Square(p, e);
     std::cout << "Sq is at:" << sq.toString() << std::endl;
 
-    const float &x = 3.0;
-    const float &y = 4.7;
+    float x = 3.0;
+    float y = 4.7;
     Point q = Point();
     q.setX(x);
     q.setY(y);

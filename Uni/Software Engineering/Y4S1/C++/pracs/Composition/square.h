@@ -15,6 +15,11 @@ public:
     Point &midpoint();
     float length() const;
     std::string toString();
+
+    Point topLeft() const;
+    Point topRight() const;
+    Point bottomLeft() const;
+    Point bottomRight() const;
 private:
     Point _midpoint;
     float _length;

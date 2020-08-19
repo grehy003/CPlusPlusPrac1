@@ -22,6 +22,7 @@ public:
     Point bottomRight() const;
 
     void translate(const Point& amount);
+    void translate(const float& xAmount,const float& yAmount);
 private:
     Point _midpoint;
     float _length;

@@ -17,6 +17,13 @@ void Square::translate(const Point &amount){
     setMidpoint(p);
 }
 
+void Square::translate(const float& xAmount,const float& yAmount){
+    float newX = this->midpoint().x() + xAmount;
+    float newY = this->midpoint().y() + yAmount;
+    Point p = Point(newX,newY);
+    setMidpoint(p);
+}
+
 Point Square::topLeft() const{
     return Point(this->_midpoint.x() - (length() /2), this->_midpoint.y() + (length() /2));
 }

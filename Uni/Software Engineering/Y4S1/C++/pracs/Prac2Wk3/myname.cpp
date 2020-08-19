@@ -1,21 +1,38 @@
 #include "myname.h"
+#include <string.h>
+#include <vector>
 
+MyName::MyName(const std::string &first, const std::string &last){
+    MyName(first,"Jack",last);
+}
 
-
-MyName::MyName(const std::string &first, const std::string &last, const std::string &middle)
-    :_first{first},_last{last},_middle{middle}
+MyName::MyName(const std::string &first, const std::string &middle, const std::string &last)
+    :_first{first},_middle{middle},_last{last}
 {
 
 };
 
 MyName MyName::readFrom(std::istream &input)
 {
-    std::string first, last, middle;
-    input >> first >> last >> middle;
-    return MyName(first,last,middle);
+    //std::string first, middle, last;
+    //input >> first >> middle >> last;
+    std::vector<std::string> namesVector;
+
+    std::string nameString;
+
+   for(;getline(input,nameString,'\n');){
+        namesVector.push_back(nameString);
+   }
+
+    if(namesVector.size() < 3){
+        return MyName(namesVector[0],namesVector[1]);
+    }
+    else{
+        return MyName(namesVector[0],namesVector[1],namesVector[2]);
+    }
 };
 
 void MyName::show(std::ostream &output){
-    output << _first << " " << _last << " " << _middle << " ";
+    output << _first << " " << _middle << " " << _last << " ";
 };
 

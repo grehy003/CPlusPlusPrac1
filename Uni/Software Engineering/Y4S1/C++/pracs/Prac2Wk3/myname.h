@@ -6,16 +6,17 @@
 class MyName
 {
 public:
-    //Equals sign sets a default value of "Jack", another value can still be passed in instead
-    MyName(const std::string &first, const std::string &last, const std::string &middle = "Jack");
+
+    MyName(const std::string &first, const std::string &last);
+    MyName(const std::string &first, const std::string &middle, const std::string &last);
     MyName(const MyName &other) = default;
 
     void show(std::ostream &output);
     static MyName readFrom(std::istream &input);
 private:
     std::string _first;
-    std::string _last;
     std::string _middle;
+    std::string _last;
 };
 
 #endif // MYNAME_H

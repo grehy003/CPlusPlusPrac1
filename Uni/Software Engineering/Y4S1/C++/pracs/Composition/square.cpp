@@ -10,6 +10,13 @@ Square::Square(Point point, float length)
     setLength(length);
 }
 
+void Square::translate(const Point &amount){
+    float newX = this->midpoint().x() + amount.x();
+    float newY = this->midpoint().y() + amount.y();
+    Point p = Point(newX,newY);
+    setMidpoint(p);
+}
+
 Point Square::topLeft() const{
     return Point(this->_midpoint.x() - (length() /2), this->_midpoint.y() + (length() /2));
 }

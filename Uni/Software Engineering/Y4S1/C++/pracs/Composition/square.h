@@ -20,6 +20,8 @@ public:
     Point topRight() const;
     Point bottomLeft() const;
     Point bottomRight() const;
+
+    void translate(const Point& amount);
 private:
     Point _midpoint;
     float _length;

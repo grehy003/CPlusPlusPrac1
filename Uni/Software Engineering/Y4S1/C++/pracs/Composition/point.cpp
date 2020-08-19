@@ -4,14 +4,14 @@ Point Point::origin = Point();
 
 Point::Point(float x, float y)
 {
-
+    setX(x);setY(y);
 }
 
-void Point::setX(float x) {
+void Point::setX(float &x) {
     _x = x;
 }
 
-void Point::setY(float y) {
+void Point::setY(float &y) {
     _y = y;
 }
 

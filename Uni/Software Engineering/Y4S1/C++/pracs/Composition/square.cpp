@@ -10,6 +10,22 @@ Square::Square(Point point, float length)
     setLength(length);
 }
 
+Point Square::topLeft() const{
+    return Point(this->_midpoint.x() - (length() /2), this->_midpoint.y() + (length() /2));
+}
+
+Point Square::topRight() const{
+    return Point(this->_midpoint.x() + (length() /2), this->_midpoint.y() + (length() /2));
+}
+
+Point Square::bottomLeft() const{
+    return Point(this->_midpoint.x() - (length() /2), this->_midpoint.y() - (length() /2));
+}
+
+Point Square::bottomRight() const{
+    return Point(this->_midpoint.x() + (length() /2), this->_midpoint.y() - (length() /2));
+}
+
 void Square::setMidpoint(Point &p){
     _midpoint = p;
 }

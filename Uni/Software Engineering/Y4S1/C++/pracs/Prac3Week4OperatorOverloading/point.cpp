@@ -18,3 +18,8 @@ Point Point::operator-(const Point &point) const{
     double newY = this->y() - point.y();
     return Point(newX,newY);
 }
+Point Point::operator * (const double &scalar) const{
+    double newX = this->x() * scalar;
+    double newY = this->y() * scalar;
+    return Point(newX,newY);
+}

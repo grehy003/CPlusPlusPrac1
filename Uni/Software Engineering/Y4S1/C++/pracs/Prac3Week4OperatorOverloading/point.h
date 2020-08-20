@@ -11,6 +11,7 @@ public:
 
     Point operator + (const Point& point) const;
     Point operator - (const Point& point) const;
+    Point operator * (const double& scalar) const;
 
     double x() const;
     double y() const;

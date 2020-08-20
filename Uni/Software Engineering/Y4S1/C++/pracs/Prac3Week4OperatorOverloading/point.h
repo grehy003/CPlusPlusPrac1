@@ -10,6 +10,7 @@ public:
     Point(const Point &point) = default;
 
     Point operator + (const Point& point) const;
+    Point operator - (const Point& point) const;
 
     double x() const;
     double y() const;

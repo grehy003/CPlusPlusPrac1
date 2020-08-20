@@ -12,3 +12,9 @@ Point Point::operator+(const Point &point) const{
     double newY = this->y() + point.y();
     return Point(newX,newY);
 }
+
+Point Point::operator-(const Point &point) const{
+    double newX = this->x() - point.x();
+    double newY = this->y() - point.y();
+    return Point(newX,newY);
+}

@@ -1,8 +1,11 @@
 #include <QCoreApplication>
+#include <point.h>
 
-int main(int argc, char *argv[])
+
+int main()
 {
-    QCoreApplication a(argc, argv);
+    Point p1, p2;
 
-    return a.exec();
+
+    return 0;
 }

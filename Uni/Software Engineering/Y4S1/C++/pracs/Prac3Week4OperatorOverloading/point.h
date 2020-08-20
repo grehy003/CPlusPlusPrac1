@@ -9,6 +9,10 @@ public:
     Point(double x, double y);
     Point(const Point &point) = default;
 
+    friend Point operator +(Point p1, Point p2);
+
+    //friend std::ostream & operator<<(std::ostream &out, const Pie &pie);
+
     double x() const;
     double y() const;
     void setX(double &x);
